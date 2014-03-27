@@ -38,6 +38,18 @@ Bundle 'scrooloose/nerdtree'
 
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
+" to consider
+" - epmatsw/ag.vim
+" - nelstrom/vim-textobj-rubyblock
+" - matchit (do/end with %)
+" - regreplop
+" - fuzzyfinder
+" - tabular
+" - NERDcommenter (replace commentary)
+" - 'kien/ctrlp.vim'
+" TPOPE
+" - endwise
+
 syntax on                       " Highlight known syntaxes
 filetype plugin indent on
 

@@ -6,3 +6,5 @@ export HISTCONTROL=ignoredups
 for file in ~/.shrc/*.sh; do
   source "$file"
 done
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

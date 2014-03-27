@@ -9,3 +9,4 @@
 .powenv
 /doc/tags
 *.rbc
+.coveralls.yml

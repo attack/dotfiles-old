@@ -1,0 +1,16 @@
+#!/bin/bash
+
+HASH="%C(red)%h%C(reset)"
+TIME="%C(green)%cd%C(reset)"
+AUTHOR="%C(blue){%an{%C(reset)"
+REFS="%C(red)%d%C(reset)"
+SUBJECT="%s"
+
+FORMAT="$HASH $TIME $AUTHOR$REFS $SUBJECT"
+
+function pretty_git_log() {
+  git log --graph --date=short --pretty="tformat:$FORMAT" $* |
+  sed -Ee 's/<(\[.{4}.*)[a-z]{2}(.*\[)>/\1\2/' |
+  awk -F "{" "{ gsub(/[a-z ]+/,\"\",\$2); gsub(/&/,\"-\",\$2); print \$0}" |
+  less -EFXRS
+}
